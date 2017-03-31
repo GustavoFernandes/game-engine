@@ -9,6 +9,7 @@ public class TicTacToeMove implements Move {
     private int column;
 
     public TicTacToeMove(int row, int column) throws InvalidMoveException {
+        // TODO invalid move exception is ambiguous with TicTacToe.isValidMove, maybe rename to something like "malformed"?
         if (row < 0 || row > 2 || column < 0 || column > 2) throw new InvalidMoveException();
 
         this.row = row;
